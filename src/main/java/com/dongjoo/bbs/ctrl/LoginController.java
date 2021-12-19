@@ -21,4 +21,6 @@ public class LoginController {
 		session.setAttribute("uerid", uerid);
 		return "bbs/inquirybbs";
 	}
+	
+	
 }

@@ -10,6 +10,7 @@
 <mvc:annotation-driven/>
 <context:component-scan base-package="com.dongjoo.bbs"/>
 
+
 <!-- TODO. 2 init.do 실행 -> Controller(HomeContoller) -> mapping(요청주소) -> 연산 -> 문자열 -> DispatcherServlet -> Resolver -> 호출 path -->
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
 	<property name="prefix" value="/WEB-INF/views/"/>
