@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.dongjoo.bbs.model.dao.InquiryDaoImpl">
   <insert id ="insertMyBBS" parameterType ="MyBBSVO">
-    INSERT INTO HR.INQUIRYBBS
+    INSERT INTO HR.MYBBS
 (SEQ, TITLE, CONTENT, REFER, STEP, "DEPTH", DELFLAG, REGDATE, SECRETFLAG, USERID)
-VALUES(INQUIRYBBS_SEQ.NEXTVAL,#{title}, #{content}, (SELECT NVL(MAX(SEQ) , 0)+1 FROM INQUIRYBBS), 0, 0, 'N',SYSDATE,'N',#{userid} );
+VALUES(MYBBS_SEQ.NEXTVAL,#{title}, #{content}, (SELECT NVL(MAX(SEQ) , 0)+1 FROM INQUIRYBBS), 0, 0, 'N',SYSDATE,'N',#{userid} )
   </insert>
   
   

@@ -31,10 +31,22 @@ public class InquiryBBSTest {
 		SqlSessionTemplate session = context.getBean("sqlSessionTemplate",SqlSessionTemplate.class);
 	
 	}
-	
+	// insertBoard 테스트
+//	Answerboard_VO vo = new Answerboard_VO();
+//	vo.setId("USER23");
+//	vo.setTitle("jUnit 테스트");
+//	vo.setContent("spring bean을 통한 테스트를 진행 중");
+//	int cnt  = dao.insertBoard(vo);
+//	assertEquals(1, cnt);
 	@Test
-	public void connectionTest() {
+	public void CRUDTest() {
+	MyBBS_VO vo = new MyBBS_VO();
+	vo.setUserid("JUnit Test");
+	vo.setContent("JUnit TEst");
+	vo.setTitle("JUnit Test");
 	
+	int cnt = dao.insertBBS(vo);
+	assertEquals(1, cnt);
 	}
 
 }

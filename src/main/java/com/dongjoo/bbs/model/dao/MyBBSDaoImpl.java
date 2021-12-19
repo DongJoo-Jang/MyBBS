@@ -18,8 +18,7 @@ public class MyBBSDaoImpl implements IMyBBSDao {
 	@Override
 	public int insertBBS(MyBBS_VO vo) {
 
-		System.out.println("새 글 등록");
-		sqlSession.insert(NS+"insertInquiryBBS",vo);
-		return 0;
+		System.out.println("새 글 등록 테스트");
+		return sqlSession.insert(NS+"insertMyBBS",vo);
 	}
 }
