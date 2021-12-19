@@ -5,6 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
+
 <!-- TODO 4 DB의 접속정보인 src/main/java에 있는 propertis 파일을 bean을 만듬 -->
 <context:property-placeholder location="classpath:properties/oracle.properties"/>
 
@@ -31,6 +32,7 @@
 <!-- 	<property name="configLocation" value="/WEB-INF/spring/sqls/Configuration.xml"/> -->
 	<property name="configLocation" value="classpath:sqls/Configuration.xml"/>
 </bean>
+
 
 <!-- Spring Container에서 DI(주입) 하여 사용할 bean  -->
 <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">

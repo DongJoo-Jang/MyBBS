@@ -1,6 +1,6 @@
 package com.dongjoo.bbs.vo;
 
-public class InquiryBBS_VO {
+public class MyBBS_VO {
 	private int inquiry_num;
 	private String title;
 	private String content;

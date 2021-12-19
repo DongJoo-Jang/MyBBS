@@ -3,16 +3,16 @@ package com.dongjoo.bbs.model.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dongjoo.bbs.model.dao.IInquiryDao;
-import com.dongjoo.bbs.vo.InquiryBBS_VO;
+import com.dongjoo.bbs.model.dao.IMyBBSDao;
+import com.dongjoo.bbs.vo.MyBBS_VO;
 
 @Service
-public class InquiryServiceImpl implements IInquiryService {
+public class MYBBSServiceImpl implements IMyBBSService {
 	@Autowired
-	IInquiryDao dao;
+	IMyBBSDao dao;
 	
 	@Override
-	public int insert(InquiryBBS_VO vo) {
+	public int insert(MyBBS_VO vo) {
 		return dao.insertBBS(vo);
 	}
 	

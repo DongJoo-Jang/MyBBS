@@ -11,34 +11,30 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.dongjoo.bbs.model.dao.IInquiryDao;
-import com.dongjoo.bbs.vo.InquiryBBS_VO;
+import com.dongjoo.bbs.model.dao.IMyBBSDao;
+import com.dongjoo.bbs.model.service.IMyBBSService;
+import com.dongjoo.bbs.vo.MyBBS_VO;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("file:src/main/webapp/WEB_INF/spring/**/*.xml")
+@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/**/*.xml")
 public class InquiryBBSTest {
 
 	@Autowired
 	private ApplicationContext context;
 	
 	@Autowired
-	private IInquiryDao dao;
+	private IMyBBSDao dao;
+
 	
 	@Bean
 	public void before() {
 		SqlSessionTemplate session = context.getBean("sqlSessionTemplate",SqlSessionTemplate.class);
-		System.out.println(session);
+	
 	}
 	
 	@Test
 	public void connectionTest() {
-		InquiryBBS_VO vo = new InquiryBBS_VO();
-		vo.setUserid("JUnitTest");
-		vo.setTitle("JUnitTest");
-		vo.setContent("JUnitTest");
-		int cnt = dao.insertBBS(vo);
-		assertEquals(1, cnt);
-		
+	
 	}
 
 }

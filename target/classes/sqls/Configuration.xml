@@ -3,12 +3,12 @@
 <configuration>
 
 <typeAliases>
-	<typeAlias type="com.dongjoo.bbs.vo.InquiryBBS_VO" alias="InquiryBBSVO"/>
+	<typeAlias type="com.dongjoo.bbs.vo.MyBBS_VO" alias="MyBBSVO"/>
 
 </typeAliases>
 
 <mappers>
-	<mapper resource="sqls/inquirybbs.xml"/>
+	<mapper resource="sqls/mybbs.xml"/>
 </mappers>
 
 
