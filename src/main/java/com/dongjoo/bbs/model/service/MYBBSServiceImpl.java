@@ -1,5 +1,7 @@
 package com.dongjoo.bbs.model.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,9 @@ public class MYBBSServiceImpl implements IMyBBSService {
 	@Override
 	public int insert(MyBBS_VO vo) {
 		return dao.insertBBS(vo);
+	}
+	public List<MyBBS_VO> selectAll() {
+		return dao.selectAll();
 	}
 	
 }

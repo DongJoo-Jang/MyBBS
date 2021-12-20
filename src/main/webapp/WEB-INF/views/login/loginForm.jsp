@@ -34,8 +34,8 @@
 	<div id="title">로그인</div>
 	<form action="./login.do" method="post">
 		<div id="userid" class="form-group">
-			<label for="id">아이디</label>
-			<input type="text" class="form-control" name="id" placeholder="아이디를 입력해주세요" required>
+			<label for="userId">아이디</label>
+			<input type="text" class="form-control" name="userId" placeholder="아이디를 입력해주세요" required>
 		</div>
 		<div id="userpw" class="form-group">
 			<label for="pw">비밀번호</label>

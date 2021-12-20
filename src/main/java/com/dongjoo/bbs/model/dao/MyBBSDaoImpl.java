@@ -1,5 +1,7 @@
 package com.dongjoo.bbs.model.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,13 @@ public class MyBBSDaoImpl implements IMyBBSDao {
 	public int insertBBS(MyBBS_VO vo) {
 
 		System.out.println("새 글 등록 테스트");
+		System.out.println(vo);
 		return sqlSession.insert(NS+"insertMyBBS",vo);
+	}
+	
+	@Override
+	public List<MyBBS_VO> selectAll() {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList(NS+"selectMyBBS");
 	}
 }

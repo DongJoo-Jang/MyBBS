@@ -1,7 +1,7 @@
 package com.dongjoo.bbs.vo;
 
 public class MyBBS_VO {
-	private int inquiry_num;
+	private int seq;
 	private String title;
 	private String content;
 	private int refer;
@@ -12,11 +12,11 @@ public class MyBBS_VO {
 	private String secretflag;
 	private String userid;
 	
-	public int getInquiry_num() {
-		return inquiry_num;
+	public int getSeq() {
+		return seq;
 	}
-	public void setInquiry_num(int inquiry_num) {
-		this.inquiry_num = inquiry_num;
+	public void setSeq(int seq) {
+		this.seq = seq;
 	}
 	public String getTitle() {
 		return title;
@@ -74,9 +74,18 @@ public class MyBBS_VO {
 	}
 	@Override
 	public String toString() {
-		return "Inquiry_VO [inquiry_num=" + inquiry_num + ", title=" + title + ", content=" + content + ", refer="
+		return "Inquiry_VO [seq=" + seq + ", title=" + title + ", content=" + content + ", refer="
 				+ refer + ", step=" + step + ", depth=" + depth + ", delflag=" + delflag + ", regdate=" + regdate
 				+ ", secretflag=" + secretflag + ", userid=" + userid + "]";
+	}
+	public MyBBS_VO(String title, String content, String userid) {
+		super();
+		this.title = title;
+		this.content = content;
+		this.userid = userid;
+	}
+	public MyBBS_VO() {
+		super();
 	}
 	
 	

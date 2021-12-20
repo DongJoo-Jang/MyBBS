@@ -17,9 +17,10 @@ public class LoginController {
 	}
 	
 	@PostMapping("/login.do")
-	public String login( String uerid, HttpSession session) {
-		session.setAttribute("uerid", uerid);
-		return "bbs/inquirybbs";
+	public String login( String userId, HttpSession session) {
+		//System.out.println("아이디는"+userId);
+		session.setAttribute("userId", userId);
+		return "mymain";
 	}
 	
 	

@@ -13,18 +13,17 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Goodee</a>
+				<a class="navbar-brand" href="#">DongJoo's Graffiti</a>
 			</div>
 			<ul class="nav navbar-nav navbar-left">
-				<li><a href="./boardList.do">게시판</a></li>
-					<li><a href="./insertBoardForm.do">글작성</a></li>
+				<li><a href="./bbsList.do">게시판</a></li>
 				
 				
 			</ul>
 
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"> ${userId}님 환영합니다
+				<li><a href="#"> ${sessionScope.userId}님 환영합니다
 				</a></li>
 				<li><a href="./logout.do"><span
 						class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>
