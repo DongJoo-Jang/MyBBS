@@ -21,4 +21,10 @@ public class MYBBSServiceImpl implements IMyBBSService {
 		return dao.selectAll();
 	}
 	
+	@Override
+	public MyBBS_VO selectBySeq(int seq) {
+		// TODO Auto-generated method stub
+		return dao.selectBySeq(seq);
+	}
+	
 }

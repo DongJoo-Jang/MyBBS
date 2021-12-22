@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.dongjoo.bbs.model.service.IMyBBSService;
 import com.dongjoo.bbs.vo.MyBBS_VO;
@@ -31,9 +32,15 @@ public class BoardController {
 		return "bbs/bbslist";
 	}
 	
-	@PostMapping("/insertBBS.do")
+	@GetMapping("/bbsinsertForm.do")
+	public String insertForm()  {
+		
+		return "bbs/bbsinsertform";
+	
+	}
+	
+	@PostMapping("/bbsinsert.do")
 	public String insertBoard(MyBBS_VO vo , HttpServletResponse resp) throws IOException {
-		System.out.println("하핳");
 		resp.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = resp.getWriter();
 		int insertCnt = service.insert(vo);
@@ -46,10 +53,14 @@ public class BoardController {
 		return "/bbs/bbslist";
 	}
 
-	@GetMapping("/insertForm.do")
-	public String insertForm()  {
-		
-		return "bbs/insertform";
+	@GetMapping("/bbsdetail.do")
+	public ModelAndView detail(int seq)  {
+
+		ModelAndView mav = new ModelAndView();
+		MyBBS_VO vo = service.selectBySeq(seq);
+		mav.setViewName("bbs/bbsdetail");
+		mav.addObject(vo);
+		return mav;
 	
 	}
 }

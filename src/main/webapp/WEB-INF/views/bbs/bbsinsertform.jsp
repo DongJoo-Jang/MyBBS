@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>게시글 입력</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -14,7 +14,7 @@
 <%@include file ="../header.jsp" %>
 <div class="container">
   <h2>새 글 입력</h2>
-  <form class="form-horizontal" action="./insertBBS.do"  method="post">
+  <form class="form-horizontal" action="./bbsinsert.do"  method="post">
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">작성자:</label>
       <div class="col-sm-10">

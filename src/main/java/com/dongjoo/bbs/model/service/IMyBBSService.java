@@ -9,4 +9,6 @@ public interface IMyBBSService {
 	public int insert(MyBBS_VO vo);
 	
 	public List<MyBBS_VO> selectAll() ;
+	
+	public MyBBS_VO selectBySeq(int seq) ;
 }

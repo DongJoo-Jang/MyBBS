@@ -27,7 +27,13 @@ public class MyBBSDaoImpl implements IMyBBSDao {
 	
 	@Override
 	public List<MyBBS_VO> selectAll() {
-		// TODO Auto-generated method stub
+		
 		return sqlSession.selectList(NS+"selectMyBBS");
+	}
+	
+	@Override
+	public MyBBS_VO selectBySeq(int seq) {
+		
+		return sqlSession.selectOne(NS+"selectMyBBSBySeq");
 	}
 }

@@ -7,7 +7,7 @@
 <style>
 
 </style>
-  <title>Bootstrap Example</title>
+  <title>게시글 리스트</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -18,7 +18,7 @@
 <%@include file ="../header.jsp" %>
 <div class="container">
   <div class="btn-group">
-    <button type="button" onclick="location.href='insertForm.do'" class="btn btn-primary">글작성</button>
+    <button type="button" onclick="location.href='bbsinsertForm.do'" class="btn btn-primary">글작성</button>
   </div>
 
   <table class="table table-condensed">
@@ -36,7 +36,7 @@
       
       <tr>
         <td>${bbs.seq }</td>
-        <td>${bbs.title }</td>
+        <td><a href = "./bbsdetail.do?seq=${bbs.seq}" >${bbs.title }</a></td>
         <td>${bbs.userid }</td>
         <td>${bbs.regdate }</td>
       </tr>

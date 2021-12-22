@@ -28,7 +28,7 @@ public class AccessLogFilter implements Filter {
 	
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
-		System.out.println("༼ つ ◕_◕ ༽つ༼ つ ◕_◕ ༽つ Filter 시작");
+		System.out.println("!!!!!!!!!!!!!!!!!!!!! Filter 시작");
 	}
 	
 	
@@ -84,6 +84,6 @@ public class AccessLogFilter implements Filter {
 
 	@Override
 	public void destroy() {
-		System.out.println("(╯°□°）╯︵ ┻━┻(╯°□°）╯︵ ┻━┻ Filter 종료"); 
+		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!! Filter 종료"); 
 	}
 }

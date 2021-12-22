@@ -7,5 +7,8 @@ import com.dongjoo.bbs.vo.MyBBS_VO;
 public interface IMyBBSDao {
 
 	public int insertBBS(MyBBS_VO vo) ;
+	
 	public List<MyBBS_VO> selectAll();
+	
+	public MyBBS_VO selectBySeq(int seq);
 }

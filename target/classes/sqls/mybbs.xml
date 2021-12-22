@@ -5,7 +5,7 @@
     INSERT INTO HR.MYBBS
 	(SEQ, TITLE, CONTENT, REFER, STEP, "DEPTH", DELFLAG, REGDATE, SECRETFLAG, USERID)
 VALUES(MYBBS_SEQ.NEXTVAL,#{title}, #{content},
- 		(SELECT NVL(MAX(SEQ) , 0)+1 FROM INQUIRYBBS), 0, 0, 'N',SYSDATE,'N',#{userid} )
+ 		(SELECT NVL(MAX(REFER) , 0)+1 FROM INQUIRYBBS), 0, 0, 'N',SYSDATE,'N',#{userid} )
   </insert>
   
   <select id="selectMyBBS"  resultType="MyBBSVO">
@@ -16,5 +16,26 @@ VALUES(MYBBS_SEQ.NEXTVAL,#{title}, #{content},
 	FROM HR.MYBBS
  
   </select>
+  
+    <select id="selectMyBBSBySeq" parameterType="java.lang.Integer" resultType="MyBBSVO">
+  
+  SELECT SEQ, TITLE, CONTENT,
+   REFER, STEP, "DEPTH", 
+   DELFLAG, REGDATE, SECRETFLAG, USERID
+	FROM HR.MYBBS
+	WHERE SEQ = #{seq}
+
+  </select>
+  
+    <select id="selectMyBBSBySeq" parameterType="java.lang.Integer" resultType="MyBBSVO">
+  
+  SELECT SEQ, TITLE, CONTENT,
+   REFER, STEP, "DEPTH", 
+   DELFLAG, REGDATE, SECRETFLAG, USERID
+	FROM HR.MYBBS
+	WHERE SEQ = #{seq}
+ 
+  </select>
+  
   
 </mapper>
